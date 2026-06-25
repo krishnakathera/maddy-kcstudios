@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.maddy-page {
+  --color-maddy-cream: #f5f0e8;
+  --color-maddy-cream-dark: #ebe4d8;
+  --color-maddy-brown: #4a3728;
+  --color-maddy-brown-light: #6b5344;
+  --color-maddy-muted: #8a7566;
+
+  background-color: var(--color-maddy-cream);
+  color: var(--color-maddy-brown);
+  font-family: var(--font-maddy-body), system-ui, sans-serif;
+}
+
+.maddy-page .font-maddy-display {
+  font-family: var(--font-maddy-display), Georgia, serif;
+}
+
+.maddy-page .text-maddy-brown {
+  color: var(--color-maddy-brown);
+}
+
+.maddy-page .text-maddy-muted {
+  color: var(--color-maddy-muted);
+}
+
+.maddy-page .bg-maddy-cream {
+  background-color: var(--color-maddy-cream);
+}
+
+.maddy-page .bg-maddy-cream-dark {
+  background-color: var(--color-maddy-cream-dark);
+}
+
+.maddy-page .border-maddy-brown {
+  border-color: color-mix(in srgb, var(--color-maddy-brown) 20%, transparent);
+}
+
+.maddy-page ::selection {
+  background-color: color-mix(in srgb, var(--color-maddy-brown) 15%, transparent);
+}
+
+@keyframes maddy-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.maddy-animate-in {
+  animation: maddy-fade-up 0.8s ease-out forwards;
+}
+
+.maddy-animate-delay-1 {
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+
+.maddy-animate-delay-2 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.maddy-animate-delay-3 {
+  animation-delay: 0.45s;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .maddy-animate-in,
+  .maddy-animate-delay-1,
+  .maddy-animate-delay-2,
+  .maddy-animate-delay-3 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
