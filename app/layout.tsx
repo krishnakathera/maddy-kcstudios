@@ -18,7 +18,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://maddy-kcstudios.pro"),
+  metadataBase: new URL("https://maddy.kcstudios.pro"),
   title: `${site.name} | Free Wedding Coordinating`,
   description: site.description,
   openGraph: {
